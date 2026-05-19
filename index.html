@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakistan Railways</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .urdu-text {
+            font-family: 'Noto Sans Arabic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Accessibility Toolbar -->
+    <div class="accessibility-toolbar">
+        <div class="container">
+            <div class="accessibility-items">
+                <button id="fontIncrease" title="Increase Font Size"><i class="fas fa-search-plus"></i> A+</button>
+                <button id="fontDecrease" title="Decrease Font Size"><i class="fas fa-search-minus"></i> A-</button>
+                <button id="highContrast" title="High Contrast"><i class="fas fa-adjust"></i></button>
+                <button id="screenReader" title="Screen Reader"><i class="fas fa-assistive-listening-systems"></i></button>
+                <button id="translateBtn" title="Translate"><i class="fas fa-language"></i> اردو</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <div class="top-header-content">
+                <div class="datetime">
+                    <i class="fas fa-clock"></i>
+                    <span id="currentDateTime">Tuesday, 10 December 2024 - 14:30 PM</span>
+                </div>
+                <div class="top-links">
+                    <a href="#"><i class="fas fa-sitemap"></i> Site Map</a>
+                    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="#"><i class="fas fa-question-circle"></i> Help</a>
+                    <a href="#"><i class="fas fa-rss"></i> RSS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Official Crest -->
+                <div class="crest">
+                    <div class="crest-circle">
+                        <div class="crest-emblem">پ ر</div>
+                    </div>
+                    <div class="crest-text">
+                        <span>Government of Pakistan</span>
+                        <span>Ministry of Railways</span>
+                    </div>
+                </div>
+
+                <!-- Main Logo -->
+                <div class="main-logo">
+                    <div class="logo-main-text">
+                        <span class="english-text">Pakistan Railways</span>
+                        <span class="urdu-text urdu-logo">پاکستان ریلویز</span>
+                    </div>
+                    <div class="logo-subtext">
+                        <span class="slogan">Linking the Nation</span>
+                    </div>
+                </div>
+
+                <!-- National Icons -->
+                <div class="national-icons">
+                    <div class="flag-container">
+                        <div class="flag">
+                            <div class="flag-green"></div>
+                            <div class="flag-white"></div>
+                            <div class="flag-moon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tagline">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-train"></i> Passenger <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fas fa-ticket-alt"></i> Online Booking</a>
+                        <a href="#"><i class="fas fa-table"></i> Train Schedule</a>
+                        <a href="#"><i class="fas fa-money-bill-wave"></i> Fare List</a>
+                        <a href="#"><i class="fas fa-bed"></i> Accommodation</a>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fas fa-box"></i> Parcel</a></li>
+                <li><a href="#"><i class="fas fa-newspaper"></i> Notices</a></li>
+                <li><a href="#"><i class="fas fa-bullhorn"></i> Tenders</a></li>
+                <li><a href="#"><i class="fas fa-briefcase"></i> Careers</a></li>
+                <li><a href="#"><i class="fas fa-download"></i> Downloads</a></li>
+                <li><a href="#"><i class="fas fa-link"></i> Links</a></li>
+                <li><a href="#"><i class="fas fa-phone-alt"></i> Contact Us</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-wrapper">
+                <!-- Left Sidebar -->
+                <aside class="sidebar">
+                    <!-- Login Box -->
+                    <div class="login-box">
+                        <h3><i class="fas fa-sign-in-alt"></i> Passenger Login</h3>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="username"><i class="fas fa-user"></i> Username/CNIC</label>
+                                <input type="text" id="username" placeholder="Enter username or CNIC">
+                            </div>
+                            <div class="form-group">
+                                <label for="password"><i class="fas fa-lock"></i> Password</label>
+                                <input type="password" id="password" placeholder="Enter password">
+                            </div>
+                            <div class="form-options">
+                                <label class="checkbox">
+                                    <input type="checkbox"> Remember me
+                                </label>
+                                <a href="#" class="forgot-link">Forgot Password?</a>
+                            </div>
+                            <button type="submit" class="btn-login">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </button>
+                            <div class="register-link">
+                                New user? <a href="#">Register here</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="quick-links-box">
+                        <h3><i class="fas fa-bolt"></i> Quick Links</h3>
+                        <ul class="quick-links-list">
+                            <li><a href="#"><i class="fas fa-search"></i> Track Your Train</a></li>
+                            <li><a href="#"><i class="fas fa-file-invoice-dollar"></i> Verify Payment</a></li>
+                            <li><a href="#"><i class="fas fa-print"></i> Print E-Ticket</a></li>
+                            <li><a href="#"><i class="fas fa-calendar-alt"></i> Train Schedule</a></li>
+                            <li><a href="#"><i class="fas fa-tag"></i> Fare Inquiry</a></li>
+                            <li><a href="#"><i class="fas fa-ban"></i> Cancel Ticket</a></li>
+                            <li><a href="#"><i class="fas fa-headset"></i> Helpline: 117</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Important Notices -->
+                    <div class="notices-box">
+                        <h3><i class="fas fa-exclamation-circle"></i> Important Notices</h3>
+                        <div class="notice-item">
+                            <span class="notice-date">15 Dec 2024</span>
+                            <p>Schedule changes for Green Line Express</p>
+                        </div>
+                        <div class="notice-item">
+                            <span class="notice-date">10 Dec 2024</span>
+                            <p>New online booking system launched</p>
+                        </div>
+                        <div class="notice-item">
+                            <span class="notice-date">05 Dec 2024</span>
+                            <p>Holiday special trains announcement</p>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content Area -->
+                <div class="content-area">
+                    <!-- Hero Banner -->
+                    <div class="hero-banner">
+                        <div class="banner-content">
+                            <h2>Welcome to Pakistan Railways</h2>
+                            <p class="urdu-text">پاکستان ریلویز کی سرکاری ویب سائٹ پر خوش آمدید</p>
+                            <p>Safe, Reliable & Comfortable Journey Across Pakistan</p>
+                            <button class="btn-book-now">
+                                <i class="fas fa-ticket-alt"></i> Book Ticket Online
+                            </button>
+                        </div>
+                        <div class="banner-features">
+                            <div class="feature-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Safe Travel</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-clock"></i>
+                                <span>On Time Service</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-tag"></i>
+                                <span>Affordable Fares</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Booking Form -->
+                    <div class="booking-container">
+                        <h2 class="section-title">
+                            <i class="fas fa-search"></i> Find & Book Trains
+                        </h2>
+                        <div class="booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="fromStation"><i class="fas fa-map-marker-alt"></i> From Station</label>
+                                    <select id="fromStation" class="station-select">
+                                        <option value="">Select Station</option>
+                                        <option value="KHI">Karachi City (کراچی)</option>
+                                        <option value="LHE">Lahore Junction (لاہور)</option>
+                                        <option value="ISB">Islamabad (اسلام آباد)</option>
+                                        <option value="RWP">Rawalpindi (راولپنڈی)</option>
+                                        <option value="FSD">Faisalabad (فیصل آباد)</option>
+                                        <option value="MUX">Multan Cantt (ملتان)</option>
+                                        <option value="PWR">Peshawar Cantt (پشاور)</option>
+                                        <option value="QTA">Quetta (کوئٹہ)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="toStation"><i class="fas fa-map-marker-alt"></i> To Station</label>
+                                    <select id="toStation" class="station-select">
+                                        <option value="">Select Station</option>
+                                        <option value="KHI">Karachi City (کراچی)</option>
+                                        <option value="LHE">Lahore Junction (لاہور)</option>
+                                        <option value="ISB">Islamabad (اسلام آباد)</option>
+                                        <option value="RWP">Rawalpindi (راولپنڈی)</option>
+                                        <option value="FSD">Faisalabad (فیصل آباد)</option>
+                                        <option value="MUX">Multan Cantt (ملتان)</option>
+                                        <option value="PWR">Peshawar Cantt (پشاور)</option>
+                                        <option value="QTA">Quetta (کوئٹہ)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="journeyDate"><i class="fas fa-calendar-alt"></i> Journey Date</label>
+                                    <input type="date" id="journeyDate" class="date-input">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="trainClass"><i class="fas fa-chair"></i> Class</label>
+                                    <select id="trainClass" class="class-select">
+                                        <option value="ALL">All Classes</option>
+                                        <option value="AC">AC Parlor</option>
+                                        <option value="AC_SLEEPER">AC Sleeper</option>
+                                        <option value="AC_BUSINESS">AC Business</option>
+                                        <option value="ECONOMY">Economy</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="passengers"><i class="fas fa-users"></i> Passengers</label>
+                                    <select id="passengers" class="passenger-select">
+                                        <option value="1">1 Adult</option>
+                                        <option value="2">2 Adults</option>
+                                        <option value="3">3 Adults</option>
+                                        <option value="4">4 Adults</option>
+                                        <option value="5">5 Adults</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="quota"><i class="fas fa-tags"></i> Quota</label>
+                                    <select id="quota" class="quota-select">
+                                        <option value="General">General</option>
+                                        <option value="Ladies">Ladies</option>
+                                        <option value="Senior">Senior Citizen</option>
+                                        <option value="Disabled">Disabled</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button class="btn-find-trains">
+                                <i class="fas fa-search"></i> Find Trains
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Live Train Status -->
+                    <div class="status-container">
+                        <h2 class="section-title">
+                            <i class="fas fa-clock"></i> Live Train Running Status
+                        </h2>
+                        <div class="status-grid">
+                            <div class="status-card on-time">
+                                <div class="train-icon">
+                                    <i class="fas fa-train"></i>
+                                </div>
+                                <div class="train-info">
+                                    <h3>Green Line Express</h3>
+                                    <p>15 Up (Karachi to Islamabad)</p>
+                                    <div class="status-info">
+                                        <span class="status-label">Status:</span>
+                                        <span class="status-value">ON TIME</span>
+                                    </div>
+                                </div>
+                                <div class="status-time">
+                                    <span>Expected: 14:00</span>
+                                    <span>Actual: 14:00</span>
+                                </div>
+                            </div>
+                            <div class="status-card delayed">
+                                <div class="train-icon">
+                                    <i class="fas fa-train"></i>
+                                </div>
+                                <div class="train-info">
+                                    <h3>Karakoram Express</h3>
+                                    <p>37 Up (Karachi to Lahore)</p>
+                                    <div class="status-info">
+                                        <span class="status-label">Status:</span>
+                                        <span class="status-value">DELAYED 45 MIN</span>
+                                    </div>
+                                </div>
+                                <div class="status-time">
+                                    <span>Expected: 13:00</span>
+                                    <span>Actual: 13:45</span>
+                                </div>
+                            </div>
+                            <div class="status-card on-time">
+                                <div class="train-icon">
+                                    <i class="fas fa-train"></i>
+                                </div>
+                                <div class="train-info">
+                                    <h3>Awam Express</h3>
+                                    <p>146 Up (Karachi to Peshawar)</p>
+                                    <div class="status-info">
+                                        <span class="status-label">Status:</span>
+                                        <span class="status-value">ON TIME</span>
+                                    </div>
+                                </div>
+                                <div class="status-time">
+                                    <span>Expected: 16:30</span>
+                                    <span>Actual: 16:30</span>
+                                </div>
+                            </div>
+                            <div class="status-card early">
+                                <div class="train-icon">
+                                    <i class="fas fa-train"></i>
+                                </div>
+                                <div class="train-info">
+                                    <h3>Allama Iqbal Express</h3>
+                                    <p>9 Up (Karachi to Sialkot)</p>
+                                    <div class="status-info">
+                                        <span class="status-label">Status:</span>
+                                        <span class="status-value">EARLY 15 MIN</span>
+                                    </div>
+                                </div>
+                                <div class="status-time">
+                                    <span>Expected: 17:15</span>
+                                    <span>Actual: 17:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Section -->
+                    <div class="services-container">
+                        <h2 class="section-title">
+                            <i class="fas fa-concierge-bell"></i> Our Services
+                        </h2>
+                        <div class="services-grid">
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-ticket-alt"></i>
+                                </div>
+                                <h3>Online Booking</h3>
+                                <p>Book train tickets online from anywhere</p>
+                                <a href="#" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <h3>Parcel Service</h3>
+                                <p>Fast and reliable parcel delivery</p>
+                                <a href="#" class="service-link">Send Parcel <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-bed"></i>
+                                </div>
+                                <h3>Accommodation</h3>
+                                <p>Railway retiring rooms & rest houses</p>
+                                <a href="#" class="service-link">Book Room <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="service-card">
+                                <div class="service-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h3>Railways Academy</h3>
+                                <p>Training and development programs</p>
+                                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <aside class="right-sidebar">
+                    <!-- Counter Section -->
+                    <div class="counter-box">
+                        <h3><i class="fas fa-users"></i> Visitors Counter</h3>
+                        <div class="counter-display">
+                            <div class="counter-digit">1</div>
+                            <div class="counter-digit">2</div>
+                            <div class="counter-digit">5</div>
+                            <div class="counter-digit">7</div>
+                            <div class="counter-digit">8</div>
+                            <div class="counter-digit">3</div>
+                            <div class="counter-digit">9</div>
+                        </div>
+                        <p class="counter-label">Total Visitors Since 1 Jan 2024</p>
+                        <div class="today-visitors">
+                            <span>Today: 1,234 visitors</span>
+                        </div>
+                    </div>
+
+                    <!-- Weather Widget -->
+                    <div class="weather-box">
+                        <h3><i class="fas fa-cloud-sun"></i> Weather</h3>
+                        <div class="weather-info">
+                            <div class="weather-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="weather-details">
+                                <span class="weather-temp">28°C</span>
+                                <span class="weather-city">Islamabad</span>
+                                <span class="weather-desc">Sunny</span>
+                            </div>
+                        </div>
+                        <div class="weather-cities">
+                            <div class="city-weather">
+                                <span>Karachi</span>
+                                <span>32°C</span>
+                            </div>
+                            <div class="city-weather">
+                                <span>Lahore</span>
+                                <span>26°C</span>
+                            </div>
+                            <div class="city-weather">
+                                <span>Peshawar</span>
+                                <span>24°C</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feedback Form -->
+                    <div class="feedback-box">
+                        <h3><i class="fas fa-comment-dots"></i> Feedback</h3>
+                        <form id="feedbackForm">
+                            <div class="form-group">
+                                <label for="feedbackEmail">Email</label>
+                                <input type="email" id="feedbackEmail" placeholder="your@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="feedbackMessage">Message</label>
+                                <textarea id="feedbackMessage" rows="3" placeholder="Your feedback..."></textarea>
+                            </div>
+                            <div class="rating">
+                                <span>Rate your experience:</span>
+                                <div class="stars">
+                                    <i class="far fa-star" data-rating="1"></i>
+                                    <i class="far fa-star" data-rating="2"></i>
+                                    <i class="far fa-star" data-rating="3"></i>
+                                    <i class="far fa-star" data-rating="4"></i>
+                                    <i class="far fa-star" data-rating="5"></i>
+                                </div>
+                                <span id="ratingText">0/5</span>
+                            </div>
+                            <button type="submit" class="btn-submit-feedback">
+                                <i class="fas fa-paper-plane"></i> Submit Feedback
+                            </button>
+                        </form>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Pakistan Railways</h3>
+                    <p>Pakistan Railways is the national, state-owned railway company of Pakistan. Founded in 1861, it operates 7,791 kilometers of track across the country.</p>
+                    <div class="urdu-about urdu-text">
+                        پاکستان ریلویز پاکستان کی قومی ریلوے کمپنی ہے جو ملک بھر میں سفر کی سہولت فراہم کرتی ہے۔
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Contact</h3>
+                    <p><i class="fas fa-phone"></i> Helpline: 117</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@pakrail.gov.pk</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Headquarters: Lahore</p>
+                    <p><i class="fas fa-clock"></i> Working Hours: 9AM - 5PM</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Important Links</h3>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Ministry of Railways</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> PRIS (Railway Info System)</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Freight Rates</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Train Schedule</a>
+                    <a href="#"><i class="fas fa-external-link-alt"></i> Fare List</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                        <input type="email" placeholder="Enter your email">
+                        <button>Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">Home</a> | 
+                    <a href="#">Disclaimer</a> | 
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a> | 
+                    <a href="#">Sitemap</a> | 
+                    <a href="#">Accessibility</a> |
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="copyright">
+                    <p>© 2026 Pakistan Railways. All Rights Reserved.</p>
+                    <p class="footer-note">
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
